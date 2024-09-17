@@ -4,36 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "df29bf5f98da2096",
-        "type": "tabs",
-        "dimension": 46.192893401015226,
-        "children": [
-          {
-            "id": "82adcf7451b4f4f2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inception Doc/Dockerfile.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "2c772eae819868fb",
         "type": "tabs",
-        "dimension": 53.80710659898477,
         "children": [
           {
             "id": "99a70d41ac903f4b",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Inception Doc/0. Inception Doc.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -86,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 203.5
   },
   "right": {
     "id": "d12cbc68fe3add57",
@@ -102,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Inception Doc/Dockerfile.md",
+                "file": "Inception Doc/0. Inception Doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Inception Doc/Dockerfile.md",
+                "file": "Inception Doc/0. Inception Doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Inception Doc/Dockerfile.md"
+                "file": "Inception Doc/0. Inception Doc.md"
               }
             }
           }
@@ -164,11 +147,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "82adcf7451b4f4f2",
+  "active": "99a70d41ac903f4b",
   "lastOpenFiles": [
-    "Inception Doc/Docker Images.md",
+    "srcs/requirements/nginx/nginx.conf",
+    "srcs/requirements/nginx/nginx.config",
+    "Debian images.md",
     "Inception Doc/0. Inception Doc.md",
+    "Inception Doc/Dockerfile.md",
     "Inception Doc/1. Docker overview.md",
+    "Inception Doc/Docker Images.md",
+    "Inception Doc/Writing a Dockerfile.md",
+    "srcs/requirements/wordpress/Dockerfile",
+    "srcs/requirements/nginx/Dockerfile",
+    "srcs/requirements/mariadb/Dockerfile",
+    "srcs/requirements/wordpress",
+    "srcs/requirements/nginx",
+    "srcs/requirements/mariadb",
+    "srcs/requirements",
     "Inception Doc/Containerization.md",
     "Inception Doc/Best Practices.md",
     "Inception Doc/Network Configuration.md",
@@ -187,11 +182,7 @@
     "Inception Doc/WordPress Dockerfile.md",
     "Inception Doc/NGINX Dockerfile.md",
     "Inception Doc/Project Dockerfiles.md",
-    "Inception Doc/Writing a Dockerfile.md",
-    "Inception Doc/Dockerfile.md",
     "Inception Doc/Alpine vs Debian.md",
-    "Inception Doc/Docker vs Virtual Machines.md",
-    "README.md",
     "Inception Doc"
   ]
 }
