@@ -149,12 +149,13 @@
   },
   "active": "99a70d41ac903f4b",
   "lastOpenFiles": [
+    "Inception Doc/Dockerfile.md",
+    "srcs/requirements/mariadb/mariadb.conf",
+    "Inception Doc/1. Docker overview.md",
+    "Inception Doc/0. Inception Doc.md",
     "srcs/requirements/nginx/nginx.conf",
     "srcs/requirements/nginx/nginx.config",
     "Debian images.md",
-    "Inception Doc/0. Inception Doc.md",
-    "Inception Doc/Dockerfile.md",
-    "Inception Doc/1. Docker overview.md",
     "Inception Doc/Docker Images.md",
     "Inception Doc/Writing a Dockerfile.md",
     "srcs/requirements/wordpress/Dockerfile",
@@ -182,7 +183,6 @@
     "Inception Doc/WordPress Dockerfile.md",
     "Inception Doc/NGINX Dockerfile.md",
     "Inception Doc/Project Dockerfiles.md",
-    "Inception Doc/Alpine vs Debian.md",
-    "Inception Doc"
+    "Inception Doc/Alpine vs Debian.md"
   ]
 }
