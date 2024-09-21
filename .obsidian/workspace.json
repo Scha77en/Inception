@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "99a70d41ac903f4b",
+            "id": "e570915564dcef66",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -17,6 +17,20 @@
                 "mode": "source",
                 "source": false
               }
+            }
+          }
+        ]
+      },
+      {
+        "id": "0c27e73c68a3bf35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "99a70d41ac903f4b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +99,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Inception Doc/0. Inception Doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Inception Doc/0. Inception Doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +136,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Inception Doc/0. Inception Doc.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -149,10 +159,10 @@
   },
   "active": "99a70d41ac903f4b",
   "lastOpenFiles": [
+    "Inception Doc/0. Inception Doc.md",
     "Inception Doc/Dockerfile.md",
     "srcs/requirements/mariadb/mariadb.conf",
     "Inception Doc/1. Docker overview.md",
-    "Inception Doc/0. Inception Doc.md",
     "srcs/requirements/nginx/nginx.conf",
     "srcs/requirements/nginx/nginx.config",
     "Debian images.md",
