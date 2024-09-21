@@ -28,6 +28,27 @@
 # # Build command: docker build -t nginx_image .
 # # Run command: docker run -it -p 80:80 -p 443:443 nginx_image
 
+
+#--------------------------------------------
+# # srcs/requirements/nginx/Dockerfile
+# FROM debian:buster
+
+# RUN apt-get update && apt-get install -y nginx openssl
+
+# # Generate self-signed SSL certificate
+# RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+#     -keyout /etc/ssl/private/nginx-selfsigned.key \
+#     -out /etc/ssl/certs/nginx-selfsigned.crt \
+#     -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=localhost"
+
+# COPY nginx.conf /etc/nginx/nginx.conf
+
+# EXPOSE 443
+
+# CMD ["nginx", "-g", "daemon off;"]
+
+--------------------------------------------
+
 # srcs/requirements/nginx/Dockerfile
 FROM debian:buster
 
@@ -40,6 +61,9 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=localhost"
 
 COPY nginx.conf /etc/nginx/nginx.conf
+
+# Create a simple HTML file for testing
+RUN echo "<!DOCTYPE html><html><body><h1>Welcome to Inception!</h1><p>NGINX is working correctly.</p></body></html>" > /var/www/html/index.html
 
 EXPOSE 443
 
