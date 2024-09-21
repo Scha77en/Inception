@@ -5,30 +5,32 @@ FROM debian:buster
 RUN apt-get update && apt-get install -y \
     php7.3-fpm \
     php7.3-mysql \
-    wget \
-    unzip
+    php7.3-curl \
+    php7.3-gd \
+    php7.3-intl \
+    php7.3-mbstring \
+    php7.3-soap \
+    php7.3-xml \
+    php7.3-xmlrpc \
+    php7.3-zip \
+    wget
 
-# Create necessary directories
-RUN mkdir -p /var/www/html
-
-# Download and set up WordPress
-RUN wget https://wordpress.org/latest.zip && \
-    unzip latest.zip && \
-    mv wordpress/* /var/www/html/ && \
-    rm -rf wordpress latest.zip
+# Install wp-cli
+RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
+    chmod +x wp-cli.phar && \
+    mv wp-cli.phar /usr/local/bin/wp
 
 # Configure PHP-FPM to listen on port 9000
 RUN sed -i 's/listen = \/run\/php\/php7.3-fpm.sock/listen = 9000/g' /etc/php/7.3/fpm/pool.d/www.conf
 
-# Create directory for PHP-FPM socket
-RUN mkdir -p /run/php
-
-# Copy WordPress configuration
-COPY conf/wp-config.php /var/www/html/wp-config.php
+# Create necessary directories
+RUN mkdir -p /var/www/html /run/php
 
 # Copy entrypoint script
 COPY tools/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+
+WORKDIR /var/www/html
 
 EXPOSE 9000
 

@@ -47,7 +47,7 @@
 
 # CMD ["nginx", "-g", "daemon off;"]
 
---------------------------------------------
+# --------------------------------------------
 
 # srcs/requirements/nginx/Dockerfile
 FROM debian:buster
