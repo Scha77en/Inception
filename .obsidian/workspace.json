@@ -99,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Inception Doc/0. Inception Doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,6 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Inception Doc/0. Inception Doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +138,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Inception Doc/0. Inception Doc.md"
+              }
             }
           }
         ],
@@ -157,8 +161,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "99a70d41ac903f4b",
+  "active": "e570915564dcef66",
   "lastOpenFiles": [
+    "srcs/requirements/wordpress/conf/wp-config.php",
+    "srcs/requirements/wordpress/conf/wp-config.",
     "Inception Doc/0. Inception Doc.md",
     "Inception Doc/Dockerfile.md",
     "srcs/requirements/mariadb/mariadb.conf",
@@ -174,7 +180,6 @@
     "srcs/requirements/wordpress",
     "srcs/requirements/nginx",
     "srcs/requirements/mariadb",
-    "srcs/requirements",
     "Inception Doc/Containerization.md",
     "Inception Doc/Best Practices.md",
     "Inception Doc/Network Configuration.md",

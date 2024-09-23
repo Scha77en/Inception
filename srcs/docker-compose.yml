@@ -1,6 +1,7 @@
 # srcs/docker-compose.yml
 services:
   nginx:
+    container_name: nginx
     build: 
       context: ./requirements/nginx
       dockerfile: Dockerfile
@@ -13,7 +14,25 @@ services:
     networks:
       - inception_network
 
+  mariadb:
+    container_name: mariadb
+    build: 
+      context: ./requirements/mariadb
+      dockerfile: Dockerfile
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    # environment:
+    #   - MYSQL_DATABASE=${MYSQL_DATABASE}
+    #   - MYSQL_USER=${MYSQL_USER}
+    #   - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    #   - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    env_file:
+      - .env
+    networks:
+      - inception_network
+
   wordpress:
+    container_name: wordpress
     build: 
       context: ./requirements/wordpress
       dockerfile: Dockerfile
@@ -31,21 +50,6 @@ services:
     networks:
       - inception_network
 
-  mariadb:
-    build: 
-      context: ./requirements/mariadb
-      dockerfile: Dockerfile
-    volumes:
-      - mariadb_data:/var/lib/mysql
-    # environment:
-    #   - MYSQL_DATABASE=${MYSQL_DATABASE}
-    #   - MYSQL_USER=${MYSQL_USER}
-    #   - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-    #   - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-    env_file:
-      - .env
-    networks:
-      - inception_network
 
 volumes:
   wordpress_data:

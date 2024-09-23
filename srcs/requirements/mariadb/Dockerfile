@@ -22,7 +22,7 @@
 # # The MariaDB Dockerfile is used to build the MariaDB image and run the MariaDB container.
 
 # srcs/requirements/mariadb/Dockerfile
-FROM debian:buster
+FROM debian:bullseye
 
 RUN apt update && apt install -y mariadb-server
 
