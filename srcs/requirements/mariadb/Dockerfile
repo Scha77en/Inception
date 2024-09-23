@@ -24,8 +24,7 @@
 # srcs/requirements/mariadb/Dockerfile
 FROM debian:buster
 
-RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y mariadb-server
+RUN apt update && apt install -y mariadb-server
 
 COPY conf/mariadb.conf /etc/mysql/mariadb.conf.d/50-server.cnf
 

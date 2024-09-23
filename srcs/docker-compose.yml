@@ -21,11 +21,13 @@ services:
       - wordpress_data:/var/www/html
     depends_on:
       - mariadb
-    environment:
-      - WORDPRESS_DB_HOST=mariadb
-      - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
-      - WORDPRESS_DB_USER=${MYSQL_USER}
-      - WORDPRESS_DB_PASSWORD=${MYSQL_PASSWORD}
+    # environment:
+    #   - WORDPRESS_DB_HOST=mariadb
+    #   - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
+    #   - WORDPRESS_DB_USER=${MYSQL_USER}
+    #   - WORDPRESS_DB_PASSWORD=${MYSQL_PASSWORD}
+    env_file:
+      - .env
     networks:
       - inception_network
 
@@ -35,17 +37,30 @@ services:
       dockerfile: Dockerfile
     volumes:
       - mariadb_data:/var/lib/mysql
-    environment:
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    # environment:
+    #   - MYSQL_DATABASE=${MYSQL_DATABASE}
+    #   - MYSQL_USER=${MYSQL_USER}
+    #   - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    #   - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    env_file:
+      - .env
     networks:
       - inception_network
 
 volumes:
   wordpress_data:
+    # driver: local
+    # options:
+    #   type: none
+    #   device: /home/$(whoami)/data/wordpress_data
+    #   o: bind
+
   mariadb_data:
+    # driver: local
+    # options:
+    #   type: none
+    #   device: /home/$(whoami)/data/mariadb_data
+    #   o: bind
 
 networks:
   inception_network:
