@@ -24,16 +24,17 @@
 # srcs/requirements/mariadb/Dockerfile
 FROM debian:buster
 
-RUN apt-get update && apt-get install -y mariadb-server
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y mariadb-server
 
-COPY conf/my.conf /etc/mysql/my.conf
+COPY conf/mariadb.conf /etc/mysql/mariadb.conf.d/50-server.cnf
 
 COPY tools/init-db.sh /docker-entrypoint-initdb.d/
 
 RUN chmod +x /docker-entrypoint-initdb.d/init-db.sh
 
-RUN mkdir -p /var/run/mysqld && chown -R mysql:mysql /var/run/mysqld
+# RUN mkdir -p /var/run/mysqld && chown -R mysql:mysql /var/run/mysqld
 
 EXPOSE 3306
 
-CMD ["mysqld", "-u", "root"]
+CMD ["bash", "/docker-entrypoint-initdb.d/init-db.sh"]

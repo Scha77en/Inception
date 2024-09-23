@@ -1,6 +1,9 @@
 #!/bin/bash
 # srcs/requirements/mariadb/tools/init-db.sh
 
+# sed -i "s|# port = 3306|port = 3306|1" /etc/mysql/mariadb.cnf
+# sed -i "s|bind-address\s*=.*|bind-address = 0.0.0.0|" /etc/mysql/mariadb.cnf
+
 set -e
 
 mysql_install_db --user=mysql --ldata=/var/lib/mysql

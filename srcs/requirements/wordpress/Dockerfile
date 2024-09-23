@@ -3,12 +3,12 @@ FROM debian:buster
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
-    php7.4
-    php7.4-fpm \
-    php7.4-mysql \
+    php \
+    php-fpm \
+    php-mysql \
     curl \
     mariadb-client \
-    wget \
+    wget && \
     rm -rf /var/lib/apt/lists/*
 
 COPY ./conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
@@ -35,4 +35,4 @@ WORKDIR /var/www/wordpress
 EXPOSE 9000
 
 ENTRYPOINT ["bash", "/entrypoint.sh"]
-CMD ["/usr/sbin/php-fpm7.4", "-F"]
+CMD ["/usr/sbin/php-fpm", "-F"]
