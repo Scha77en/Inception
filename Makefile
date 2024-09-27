@@ -1,16 +1,29 @@
-# Makefile
-all: up
+DB_DATA = /home/aouhbi/data/mariadb
+WP_DATA = /home/aouhbi/data/wordpress
 
-up:
-	docker-compose -f srcs/docker-compose.yml up -d --build
+all : up
 
-down:
-	docker-compose -f srcs/docker-compose.yml down
+up : build
+	@mkdir -p $(DB_DATA)
+	@mkdir -p $(WP_DATA)
+	docker compose -f ./srcs/docker-compose.yml up -d
 
-clean: down
-	docker system prune -af
-	docker volume rm $$(docker volume ls -q)
+down : 
+	docker compose -f ./srcs/docker-compose.yml down
 
-re: clean up
+stop : 
+	docker compose -f ./srcs/docker-compose.yml stop
 
-.PHONY: all up down clean re
+start : 
+	docker compose -f ./srcs/docker-compose.yml start
+
+build :
+	docker compose -f ./srcs/docker-compose.yml build
+
+fclean:
+	docker system prune -a --volumes -f 
+
+status : 
+	docker ps
+
+re: fclean all

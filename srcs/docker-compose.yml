@@ -1,4 +1,5 @@
 # srcs/docker-compose.yml
+
 services:
   nginx:
     container_name: nginx
@@ -8,7 +9,7 @@ services:
     ports:
       - "443:443"
     volumes:
-      - wordpress_data:/var/www/html
+      - wordpress:/var/www/html
     depends_on:
       - wordpress
     networks:
@@ -20,12 +21,12 @@ services:
       context: ./requirements/mariadb
       dockerfile: Dockerfile
     volumes:
-      - mariadb_data:/var/lib/mysql
+      - mariadb:/var/lib/mysql
     # environment:
-    #   - MYSQL_DATABASE=${MYSQL_DATABASE}
-    #   - MYSQL_USER=${MYSQL_USER}
-    #   - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-    #   - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      # - MYSQL_DATABASE=wordpress
+      # - MYSQL_USER=msquser
+      # - MYSQL_PASSWORD=123456
+      # - MYSQL_ROOT_PASSWORD=0123456
     env_file:
       - .env
     networks:
@@ -37,34 +38,39 @@ services:
       context: ./requirements/wordpress
       dockerfile: Dockerfile
     volumes:
-      - wordpress_data:/var/www/html
+      - wordpress:/var/www/html
     depends_on:
       - mariadb
     # environment:
-    #   - WORDPRESS_DB_HOST=mariadb
-    #   - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
-    #   - WORDPRESS_DB_USER=${MYSQL_USER}
-    #   - WORDPRESS_DB_PASSWORD=${MYSQL_PASSWORD}
+      # - WORDPRESS_DB_HOST=mariadb
+      # - WORDPRESS_DB_NAME=wordpress
+      # - WORDPRESS_DB_USER=msquser
+      # - WORDPRESS_DB_PASSWORD=123456
     env_file:
       - .env
     networks:
       - inception_network
 
 
-volumes:
-  wordpress_data:
-    # driver: local
-    # options:
-    #   type: none
-    #   device: /home/$(whoami)/data/wordpress_data
-    #   o: bind
+# volumes:
+#   wordpress_data:
+#     driver: local
+#   mariadb_data:
+#     driver: local
 
-  mariadb_data:
-    # driver: local
-    # options:
-    #   type: none
-    #   device: /home/$(whoami)/data/mariadb_data
-    #   o: bind
+volumes:
+  wordpress:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/aouhbi/data/wordpress
+  mariadb:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/aouhbi/data/mariadb
 
 networks:
   inception_network:

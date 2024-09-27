@@ -4,7 +4,7 @@ FROM debian:bullseye
 # Install dependencies
 RUN apt update && apt install -y \
     wordpress php \
-    php-fpm \
+    php7.4-fpm \
     php-mysql \
     curl \
     mariadb-client \
@@ -17,7 +17,7 @@ RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.ph
     wp core download --path=/var/www/html/ --allow-root
 
 COPY ./conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
-COPY ./conf/wp-config.php /var/www/html/wp-config.php
+# COPY ./conf/wp-config.php /var/www/html/wp-config.php
 
 # Install wp-cli
 

@@ -28,12 +28,13 @@ RUN apt update && apt install -y mariadb-server
 
 COPY conf/mariadb.conf /etc/mysql/mariadb.conf.d/50-server.cnf
 
-COPY tools/init-db.sh /docker-entrypoint-initdb.d/
+COPY tools/init-db.sh /
 
-RUN chmod +x /docker-entrypoint-initdb.d/init-db.sh
+RUN chmod +x /init-db.sh
 
 # RUN mkdir -p /var/run/mysqld && chown -R mysql:mysql /var/run/mysqld
 
 EXPOSE 3306
 
-CMD ["bash", "/docker-entrypoint-initdb.d/init-db.sh"]
+CMD ["bash", "/init-db.sh"]
+# CMD [ "python3", "/entrypoint.py"]
