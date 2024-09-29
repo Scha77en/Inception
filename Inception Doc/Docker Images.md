@@ -92,8 +92,8 @@ RUN apt-get update && apt-get install -y nginx
 # Copy your application files
 COPY . /usr/share/nginx/html
 
-# Expose port 80
-EXPOSE 80
+# Expose port 443
+EXPOSE 443
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
@@ -102,7 +102,7 @@ This Dockerfile:
 - Uses Debian as the base image.
 - Installs NGINX.
 - Copies the application files into the container.
-- Exposes port 80 so the web server is accessible.
+- Exposes port 443 so the web server is accessible.
 - Runs NGINX in the foreground.
 
 ---

@@ -6,6 +6,7 @@
       {
         "id": "2c772eae819868fb",
         "type": "tabs",
+        "dimension": 75.21739130434783,
         "children": [
           {
             "id": "e570915564dcef66",
@@ -13,17 +14,67 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Inception Doc/0. Inception Doc.md",
+                "file": "Q&A/Explaining the implementation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fa4014caab8ddfa4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Q&A/Explaining the implementation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "53a2554e503c268d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Q&A/NGINX.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ab158899c232ee6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Q&A/Q&A of the project.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9d7bb3b4f168ec5e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "0c27e73c68a3bf35",
         "type": "tabs",
+        "dimension": 24.782608695652176,
         "children": [
           {
             "id": "99a70d41ac903f4b",
@@ -83,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 203.5
+    "width": 200
   },
   "right": {
     "id": "d12cbc68fe3add57",
@@ -99,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Inception Doc/0. Inception Doc.md",
+                "file": "Q&A/Q&A of the project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Inception Doc/0. Inception Doc.md",
+                "file": "Q&A/Q&A of the project.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Inception Doc/0. Inception Doc.md"
+                "file": "Q&A/Q&A of the project.md"
               }
             }
           }
@@ -161,11 +212,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e570915564dcef66",
+  "active": "ab158899c232ee6b",
   "lastOpenFiles": [
+    "Q&A/WordPress.md",
+    "Q&A/NGINX.md",
+    "README.md",
+    "Q&A/ENTRYPOINT && CMD.md",
+    "Q&A/Mariadb.md",
+    "Q&A/Explaining the implementation.md",
+    "Q&A/Q&A of the project.md",
+    "Untitled 1.md",
+    "Inception Doc/0. Inception Doc.md",
+    "Q&A",
     "srcs/requirements/wordpress/conf/wp-config.php",
     "srcs/requirements/wordpress/conf/wp-config.",
-    "Inception Doc/0. Inception Doc.md",
     "Inception Doc/Dockerfile.md",
     "srcs/requirements/mariadb/mariadb.conf",
     "Inception Doc/1. Docker overview.md",
@@ -178,8 +238,6 @@
     "srcs/requirements/nginx/Dockerfile",
     "srcs/requirements/mariadb/Dockerfile",
     "srcs/requirements/wordpress",
-    "srcs/requirements/nginx",
-    "srcs/requirements/mariadb",
     "Inception Doc/Containerization.md",
     "Inception Doc/Best Practices.md",
     "Inception Doc/Network Configuration.md",
@@ -191,13 +249,6 @@
     "Inception Doc/Services.md",
     "Inception Doc/Makefile --.md",
     "Inception Doc/docker-compose yml.md",
-    "Inception Doc/Docker Compose.md",
-    "Inception Doc/MariaDB Dockerfile.md",
-    "Inception Doc/WordPress Setup.md",
-    "Inception Doc/php-fpm.md",
-    "Inception Doc/WordPress Dockerfile.md",
-    "Inception Doc/NGINX Dockerfile.md",
-    "Inception Doc/Project Dockerfiles.md",
-    "Inception Doc/Alpine vs Debian.md"
+    "Inception Doc/Docker Compose.md"
   ]
 }

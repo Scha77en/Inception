@@ -32,7 +32,6 @@ y
 n
 n
 n
-n
 EOF
 
 # Execute SQL queries using root user

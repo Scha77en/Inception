@@ -9,11 +9,7 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -out /etc/ssl/certs/nginx-selfsigned.crt \
     -subj "/C=MA/ST=State/L=KH/O=1337/CN=aouhbi.42.fr"
 
-COPY ./conf/nginx.conf /etc/nginx/sites-enabled/default 
-
-# RUN mkdir -p /var/www/wordpress && \
-#     chmod 755 /var/www/wordpress && \
-#     chown www-data:www-data /var/www/wordpress
+COPY ./conf/nginx.conf /etc/nginx/sites-enabled/default
 
 EXPOSE 443
 
