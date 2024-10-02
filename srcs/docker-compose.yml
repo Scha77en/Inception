@@ -1,7 +1,7 @@
 services:
   nginx:
     container_name: nginx
-    image: nginx::kage
+    image: nginx:kage
     build: 
       context: ./requirements/nginx
       dockerfile: Dockerfile
