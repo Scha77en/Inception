@@ -1,7 +1,7 @@
 services:
   nginx:
     container_name: nginx
-    image: nginx
+    image: nginx::kage
     build: 
       context: ./requirements/nginx
       dockerfile: Dockerfile
@@ -17,7 +17,7 @@ services:
 
   mariadb:
     container_name: mariadb
-    image: mariadb
+    image: mariadb:kage
     build: 
       context: ./requirements/mariadb
       dockerfile: Dockerfile
@@ -31,7 +31,7 @@ services:
 
   wordpress:
     container_name: wordpress
-    image: wordpress
+    image: wordpress:kage
     build: 
       context: ./requirements/wordpress
       dockerfile: Dockerfile
