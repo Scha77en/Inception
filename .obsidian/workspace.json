@@ -6,7 +6,6 @@
       {
         "id": "2c772eae819868fb",
         "type": "tabs",
-        "dimension": 75.21739130434783,
         "children": [
           {
             "id": "e570915564dcef66",
@@ -24,36 +23,8 @@
             "id": "fa4014caab8ddfa4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Q&A/Explaining the implementation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "53a2554e503c268d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Q&A/NGINX.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ab158899c232ee6b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Q&A/Q&A of the project.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -69,22 +40,7 @@
             }
           }
         ],
-        "currentTab": 3
-      },
-      {
-        "id": "0c27e73c68a3bf35",
-        "type": "tabs",
-        "dimension": 24.782608695652176,
-        "children": [
-          {
-            "id": "99a70d41ac903f4b",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          }
-        ]
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -150,7 +106,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Q&A/Q&A of the project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +122,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Q&A/Q&A of the project.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,9 +143,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Q&A/Q&A of the project.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -212,17 +164,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab158899c232ee6b",
+  "active": "fa4014caab8ddfa4",
   "lastOpenFiles": [
-    "Q&A/WordPress.md",
-    "Q&A/NGINX.md",
-    "README.md",
-    "Q&A/ENTRYPOINT && CMD.md",
-    "Q&A/Mariadb.md",
     "Q&A/Explaining the implementation.md",
+    "Q&A/NGINX.md",
+    "Q&A/Mariadb.md",
     "Q&A/Q&A of the project.md",
-    "Untitled 1.md",
+    "Q&A/WordPress.md",
+    "README.md",
     "Inception Doc/0. Inception Doc.md",
+    "Q&A/ENTRYPOINT && CMD.md",
+    "Untitled 1.md",
     "Q&A",
     "srcs/requirements/wordpress/conf/wp-config.php",
     "srcs/requirements/wordpress/conf/wp-config.",

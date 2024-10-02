@@ -337,7 +337,7 @@ exit;
 
 
 
-### **NAMESPACES :
+### **NAMESPACES :**
 
 Namespaces in containers are a fundamental feature of the Linux kernel that provide isolation for various system resources. They allow multiple instances of the same resource (like processes, network interfaces, and file systems) to run simultaneously in separate environments without interfering with each other. This is crucial for containerization, as it helps ensure that containers are isolated from the host system and from each other.
 
@@ -392,7 +392,7 @@ Examples of Namespaces used our project :
 Overall, Docker abstracts these namespaces for you, but they are indeed a fundamental part of how your containers operate, providing isolation and security for your applications.
 
 
-### **What are Cgroups :
+### **What are Cgroups :**
 
 Control groups (Cgroups) are a Linux kernel feature that allows you to allocate and limit system resources (such as CPU, memory, disk I/O, and network bandwidth) for a group of processes. They are crucial for resource management and isolation in containerization. Here’s a brief overview of key aspects:
 
@@ -409,7 +409,7 @@ Control groups (Cgroups) are a Linux kernel feature that allows you to allocate 
 
 In the context of Docker and other containerization technologies, Cgroups play a vital role in ensuring that containers operate efficiently and without interfering with each other or the host system.
 
-#### **Cgroups management :
+#### **Cgroups management :**
 
 In Docker, control groups (Cgroups) are primarily managed by Docker itself, but you can also configure them according to your needs. Here’s how it works:
 
